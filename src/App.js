@@ -4,7 +4,7 @@ import { useState } from 'react';
 import { Typography, AppBar, Card, CardActions, CardContent, CssBaseline, Grid, Toolbar, Container, IconButton } from '@mui/material';
 import { DeveloperBoard, Menu } from '@mui/icons-material';
 import ChannelBrowser from './pages/ChannelBrowser';
-
+import Dashboard from './pages/Dashboard';
 
 export default function App() {
     const { userID, setUserID } = useState('admin');
@@ -17,7 +17,7 @@ export default function App() {
     return (
         <>
             <CssBaseline />
-            <AppBar position='relative'>
+            {/* <AppBar position='relative'>
                 <Toolbar>
                     <IconButton size='large' edge='start' color='inherit' aria-label='menu' sx={{ mr: 2 }}>
                         <Menu />
@@ -26,12 +26,13 @@ export default function App() {
                         Blueway ATE 2022
                     </Typography>
                 </Toolbar>
-            </AppBar>
+            </AppBar> */}
             <main>
                 <div>
-                    <Container maxWidth='sm'>
+                    {/* <Container maxWidth='sm'>
                         <ChannelBrowser host='127.0.0.1' port ={12345}/>
-                    </Container>
+                    </Container> */}
+                    <Dashboard />
                 </div>
             </main>
         </>
