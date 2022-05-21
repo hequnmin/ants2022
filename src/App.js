@@ -1,16 +1,11 @@
 
 import React from 'react';
-import { useState } from 'react';
-import { HashRouter, Switch, Route, Router, Routes } from 'react-router-dom'
-//import { Typography, AppBar, Card, CardActions, CardContent, CssBaseline, Grid, Toolbar, Container, IconButton } from '@mui/material';
-import { DeveloperBoard, Menu } from '@mui/icons-material';
+import { HashRouter, Route, Routes } from 'react-router-dom'
+import { createTheme, ThemeProvider } from '@mui/material';
 import { Home } from './pages/Home';
 import { Demo } from './pages/Demo';
-import ChannelBrowser from './pages/ChannelBrowser';
-import Dashboard from './pages/Dashboard';
-import { createTheme, ThemeProvider } from '@mui/material';
 import { purple } from '@mui/material/colors';
-import AppLayout from './components/AppLayout';
+import { AppLayout } from './components/AppLayout';
 
 const theme = createTheme({
     palette: {

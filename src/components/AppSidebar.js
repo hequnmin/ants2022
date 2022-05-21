@@ -1,8 +1,8 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { PropTypes } from "prop-types";
-import { CssBaseline, Typography, Box, AppBar, Drawer, Toolbar, IconButton, Badge, List, Divider, Container, Grid, Paper, Link } from '@mui/material';
-import { styled, createTheme, ThemeProvider } from '@mui/material/styles';
-import { Menu, Notifications, ChevronLeft } from '@mui/icons-material';
+import { Drawer, Toolbar, IconButton, List, Divider } from '@mui/material';
+import { styled } from '@mui/material/styles';
+import { ChevronLeft } from '@mui/icons-material';
 import { mainListItems, secondaryListItems } from "../pages/listItems";
 
 const drawerWidth = 240;

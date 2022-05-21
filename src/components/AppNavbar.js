@@ -1,9 +1,8 @@
 import React from "react";
 import PropTypes from 'prop-types';
-import { CssBaseline, Typography, Box, AppBar, Drawer, Toolbar, IconButton, Badge, List, Divider, Container, Grid, Paper, Link } from '@mui/material';
-import { Menu, Notifications, ChevronLeft } from '@mui/icons-material';
-import { makeStyles } from "@mui/styles";
-import { styled, createTheme, ThemeProvider } from '@mui/material/styles';
+import { Typography, AppBar, Toolbar, IconButton, Badge } from '@mui/material';
+import { Menu, Notifications } from '@mui/icons-material';
+import { styled } from '@mui/material/styles';
 
 const drawerWidth = 240;
 const AppNavRoot = styled(AppBar, { shouldForwardProp: (prop) => prop !== 'open' })
@@ -25,8 +24,6 @@ const AppNavRoot = styled(AppBar, { shouldForwardProp: (prop) => prop !== 'open'
 
 
 export const AppNavbar = (props) => {
-    // const [open, setOpen] = React.useState(props.open);
-
     const { open, onOpen, ...other } = props;
 
     return (
