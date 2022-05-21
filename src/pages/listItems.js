@@ -1,4 +1,5 @@
 import * as React from 'react';
+import { Link as RouterLink, useLocation } from 'react-router-dom';
 import ListItemButton from '@mui/material/ListItemButton';
 import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
@@ -9,21 +10,29 @@ import PeopleIcon from '@mui/icons-material/People';
 import BarChartIcon from '@mui/icons-material/BarChart';
 import LayersIcon from '@mui/icons-material/Layers';
 import AssignmentIcon from '@mui/icons-material/Assignment';
+import { Link } from '@mui/material';
+import { Demo } from './Demo';
+import { Home } from './Home';
+import ChannelBrowser from './ChannelBrowser';
 
 export const mainListItems = (
     <React.Fragment>
-        <ListItemButton>
-            <ListItemIcon>
-                <DashboardIcon />
-            </ListItemIcon>
-            <ListItemText primary="Dashboard" />
-        </ListItemButton>
-        <ListItemButton>
-            <ListItemIcon>
-                <ShoppingCartIcon />
-            </ListItemIcon>
-            <ListItemText primary="Orders" />
-        </ListItemButton>
+        <Link underline="none" component={RouterLink} to="/home">
+            <ListItemButton>
+                <ListItemIcon>
+                    <DashboardIcon />
+                </ListItemIcon>
+                <ListItemText primary="Home" />
+            </ListItemButton>
+        </Link>
+        <Link underline="none" component={RouterLink} to="/demo">
+            <ListItemButton>
+                <ListItemIcon>
+                    <ShoppingCartIcon />
+                </ListItemIcon>
+                <ListItemText primary="Demo" />
+            </ListItemButton>
+        </Link>
         <ListItemButton>
             <ListItemIcon>
             <PeopleIcon />
