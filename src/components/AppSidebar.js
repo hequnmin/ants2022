@@ -3,7 +3,7 @@ import { PropTypes } from "prop-types";
 import { Drawer, Toolbar, IconButton, List, Divider } from '@mui/material';
 import { styled } from '@mui/material/styles';
 import { ChevronLeft } from '@mui/icons-material';
-import { mainListItems, secondaryListItems } from "../pages/listItems";
+import { MenuMainItems, MenuSecondaryItems } from "../pages/MenuList";
 
 const drawerWidth = 240;
 const AppDrawer = styled(Drawer, { shouldForwardProp: (prop) => prop !== 'open' })(
@@ -48,9 +48,9 @@ export const AppSidebar = (props) => {
             </Toolbar>
             <Divider />
             <List component="nav">
-                {mainListItems}
+                <MenuMainItems/>
                 <Divider sx={{ my: 1 }} />
-                {secondaryListItems}
+                <MenuSecondaryItems />
             </List>
         </AppDrawer>
     </>

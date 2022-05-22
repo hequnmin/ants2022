@@ -4,7 +4,7 @@ import { Typography, Grid, Box, Button, TextField, Switch, FormGroup, FormContro
 import { CurrentTimeString } from '../common';
 import message from '../message';
 
-const ChannelBrowser = (props) => {
+export const ChannelBrowser = (props) => {
     // useState相当于构造函数初始值，首次加载
     const [ socket, setSocket] = useState(() => { 
         const net = require('net');
@@ -99,5 +99,3 @@ const ChannelBrowser = (props) => {
         </>
     )
 }
-
-export default ChannelBrowser;

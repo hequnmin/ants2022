@@ -8,6 +8,7 @@ let mainWindow;
 
 function createWindow() {
     const mainWindow = new BrowserWindow({
+        title: 'Blueway ATE 2022',
         width: 1024,
         height: 768,
         webPreferences: {

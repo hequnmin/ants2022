@@ -1,4 +1,5 @@
 import * as React from 'react';
+import PropTypes from "prop-types";
 import { Link as RouterLink, useLocation } from 'react-router-dom';
 import ListItemButton from '@mui/material/ListItemButton';
 import ListItemIcon from '@mui/material/ListItemIcon';
@@ -13,7 +14,7 @@ import AssignmentIcon from '@mui/icons-material/Assignment';
 import { Link } from '@mui/material';
 import { Demo } from './Demo';
 import { Home } from './Home';
-import ChannelBrowser from './ChannelBrowser';
+import { ChannelBrowser } from './ChannelBrowser';
 
 export const mainListItems = (
     <React.Fragment>
@@ -79,3 +80,73 @@ export const secondaryListItems = (
     </ListItemButton>
   </React.Fragment>
 );
+
+
+export const MenuMainItems = (props) => {
+    return (
+        <React.Fragment>
+            <Link underline="none" component={RouterLink} to="/home">
+                <ListItemButton>
+                    <ListItemIcon>
+                        <DashboardIcon />
+                    </ListItemIcon>
+                    <ListItemText primary="Home" />
+                </ListItemButton>
+            </Link>
+            <Link underline="none" component={RouterLink} to="/channelbrowser">
+                <ListItemButton>
+                    <ListItemIcon>
+                        <ShoppingCartIcon />
+                    </ListItemIcon>
+                    <ListItemText primary="Channel" />
+                </ListItemButton>
+            </Link>
+            <ListItemButton>
+                <ListItemIcon>
+                <PeopleIcon />
+                </ListItemIcon>
+                <ListItemText primary="Customers" />
+            </ListItemButton>
+            <ListItemButton>
+                <ListItemIcon>
+                <BarChartIcon />
+                </ListItemIcon>
+                <ListItemText primary="Reports" />
+            </ListItemButton>
+            <ListItemButton>
+                <ListItemIcon>
+                <LayersIcon />
+                </ListItemIcon>
+                <ListItemText primary="Integrations" />
+            </ListItemButton>
+        </React.Fragment>
+    );
+}
+
+export const MenuSecondaryItems = () => {
+    return (
+        <React.Fragment>
+        <ListSubheader component="div" inset>
+            Saved reports
+        </ListSubheader>
+        <ListItemButton>
+            <ListItemIcon>
+            <AssignmentIcon />
+            </ListItemIcon>
+            <ListItemText primary="Current month" />
+        </ListItemButton>
+        <ListItemButton>
+            <ListItemIcon>
+            <AssignmentIcon />
+            </ListItemIcon>
+            <ListItemText primary="Last quarter" />
+        </ListItemButton>
+        <ListItemButton>
+            <ListItemIcon>
+            <AssignmentIcon />
+            </ListItemIcon>
+            <ListItemText primary="Year-end sale" />
+        </ListItemButton>
+        </React.Fragment>
+    );
+}
