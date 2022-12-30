@@ -11,10 +11,11 @@ import PeopleIcon from '@mui/icons-material/People';
 import BarChartIcon from '@mui/icons-material/BarChart';
 import LayersIcon from '@mui/icons-material/Layers';
 import AssignmentIcon from '@mui/icons-material/Assignment';
+import { WebAsset } from '@mui/icons-material';
 import { Link } from '@mui/material';
 import { Demo } from './Demo';
 import { Home } from './Home';
-import { ChannelBrowser } from './ChannelBrowser';
+import { TCPClient } from './TCPClient';
 
 export const mainListItems = (
     <React.Fragment>
@@ -93,12 +94,28 @@ export const MenuMainItems = (props) => {
                     <ListItemText primary="Home" />
                 </ListItemButton>
             </Link>
-            <Link underline="none" component={RouterLink} to="/channelbrowser">
+            <Link underline="none" component={RouterLink} to="/tcpclient">
                 <ListItemButton>
                     <ListItemIcon>
-                        <ShoppingCartIcon />
+                        <WebAsset />
                     </ListItemIcon>
-                    <ListItemText primary="Channel" />
+                    <ListItemText primary="TCP Client" />
+                </ListItemButton>
+            </Link>
+            <Link underline="none" component={RouterLink} to="/monitor">
+                <ListItemButton>
+                    <ListItemIcon>
+                        <WebAsset />
+                    </ListItemIcon>
+                    <ListItemText primary="Monitor" />
+                </ListItemButton>
+            </Link>
+            <Link underline="none" component={RouterLink} to="/tcpserver">
+                <ListItemButton>
+                    <ListItemIcon>
+                        <WebAsset />
+                    </ListItemIcon>
+                    <ListItemText primary="TCP Server" />
                 </ListItemButton>
             </Link>
             <ListItemButton>

@@ -6,7 +6,6 @@ import MuiAppBar from '@mui/material/AppBar';
 import MuiDrawer from '@mui/material/Drawer';
 
 import { mainListItems, secondaryListItems } from './listItems';
-import ChannelBrowser from './ChannelBrowser';
 
 function Copyright(props) {
     return (
@@ -98,17 +97,14 @@ function DashboardContent() {
             </Toolbar>
             <Divider />
             <List component="nav">
-                {mainListItems}
+                { mainListItems }
                 <Divider sx={{ my: 1 }} />
                 {secondaryListItems}
             </List>
             </Drawer>
             <Box component="main"
                 sx={{
-                    backgroundColor: (theme) =>
-                    theme.palette.mode === 'light'
-                        ? theme.palette.grey[100]
-                        : theme.palette.grey[900],
+                    backgroundColor: (theme) => theme.palette.mode === 'light' ? theme.palette.grey[100] : theme.palette.grey[900],
                     flexGrow: 1,
                     height: '100vh',
                     overflow: 'auto',
